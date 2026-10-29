@@ -1,0 +1,9 @@
+{
+  "name": "The Anatomy Set",
+  "short_name": "Anatomy Set",
+  "description": "Medical words come apart in your hands. The free practice companion to Medical Terminology.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F7F2E8",
+  "theme_color": "#F7F2E8"
+}
