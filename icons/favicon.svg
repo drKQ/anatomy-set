@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<title>The Anatomy Set</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3444"/><stop offset="1" stop-color="#151922"/></linearGradient></defs>
+<rect width="512" height="512" rx="112" fill="url(#b)"/>
+<rect x="56.3" y="164.7" width="167.0" height="170.3" rx="54.5" fill="#6D4AE0"/>
+<rect x="61.4" y="169.8" width="156.8" height="73.3" rx="46.3" fill="#fff" fill-opacity=".2"/>
+<rect x="194.3" y="164.7" width="167.0" height="170.3" rx="54.5" fill="#D8384C"/>
+<rect x="199.4" y="169.8" width="156.8" height="73.3" rx="46.3" fill="#fff" fill-opacity=".2"/>
+<rect x="332.2" y="164.7" width="123.4" height="170.3" rx="54.5" fill="#0D856F"/>
+<rect x="337.3" y="169.8" width="113.3" height="73.3" rx="46.3" fill="#fff" fill-opacity=".2"/>
+<circle cx="194.3" cy="249.9" r="44.0" fill="#000" fill-opacity=".24"/>
+<circle cx="194.3" cy="249.9" r="34.4" fill="#F3EEE4"/>
+<circle cx="332.2" cy="249.9" r="44.0" fill="#000" fill-opacity=".24"/>
+<circle cx="332.2" cy="249.9" r="34.4" fill="#F3EEE4"/>
+</svg>

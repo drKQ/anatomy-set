@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Anatomy Set Practice</title>
-<meta name="description" content="Free practice for Medical Terminology by Brian Khan Quintana, M.D.: every chapter's must-know words in his own voice, matching, build the word, read the chart, and self-checks with the book's answers.">
+<meta name="description" content="Free practice for Medical Terminology by Brian Khan Quintana: every chapter's must-know words in his own voice, matching, build the word, read the chart, and self-checks with the book's answers.">
 <meta name="theme-color" content="#1c1e21">
 <style>
 :root{
@@ -110,7 +110,7 @@ let player = null;
 function clipFor(w) { const k = String(w || '').trim(); return B.clips[k] || B.clips[k.toLowerCase()] || null; }
 function speakBtn(word) {
   const src = clipFor(word); if (!src) return '';
-  return `<button class="speak" type="button" aria-label="Hear ${esc(word)} in Dr. Khan Quintana's voice" data-clip="${esc(src)}"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 7v6h4l5 4V3L7 7H3z"/><path d="M14.5 6.5a5 5 0 010 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>`;
+  return `<button class="speak" type="button" aria-label="Hear ${esc(word)} in the author's voice" data-clip="${esc(src)}"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 7v6h4l5 4V3L7 7H3z"/><path d="M14.5 6.5a5 5 0 010 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>`;
 }
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-clip]'); if (!b) return;
@@ -149,12 +149,12 @@ function home() {
   const due = dueCards().length;
   app.innerHTML = `
   <header class="top"><h1 class="serif">Anatomy Set · Practice</h1><a class="icon-btn" href="./" aria-label="Open the Anatomy Set game">Game</a></header>
-  <p class="lede">Every chapter of <i>Medical Terminology</i>, v2.0. Hear each word in Dr. Khan Quintana's voice, then prove you own it.</p>
+  <p class="lede">Every chapter of <i>Medical Terminology</i>, v2.0. Hear each word in the author's voice, then prove you own it.</p>
   ${due ? `<div class="due-banner"><b>${due}</b><div style="flex:1">words are due for review today.<div class="note">Short and spaced is how they stick.</div></div><button class="btn" id="rev">Review</button></div>` : ''}
   <div class="grid">${B.chapters.map(ch => `
     <button class="tile" data-ch="${ch.n}"><span class="num">CHAPTER ${ch.n}</span><span class="t serif">${esc(ch.title)}</span><span class="sys">${esc(ch.system)}</span>
     <span class="bar" aria-label="${Math.round(mastery(ch)*100)} percent of the must-know words mastered"><i style="width:${Math.round(mastery(ch)*100)}%"></i></span></button>`).join('')}</div>
-  <footer>Free, no account. Your progress stays on this device.<br>From <i>Medical Terminology</i> by Brian Khan Quintana, M.D.</footer>`;
+  <footer>Free, no account. Your progress stays on this device.<br>From <i>Medical Terminology</i> by Brian Khan Quintana<br>© 2026 Brian Khan Quintana. All rights reserved.</footer>`;
   app.querySelectorAll('[data-ch]').forEach(b => b.onclick = () => chapter(+b.dataset.ch));
   const r = $('#rev'); if (r) r.onclick = () => flash(null, dueCards());
 }
